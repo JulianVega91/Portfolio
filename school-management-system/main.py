@@ -13,11 +13,7 @@ def login_menu():
     tries = 0
     while tries < 6:
         username = input("Enter your Username or type exit: ").strip()
-        if username.lower() == "create":
-            print("How you know that trick?")
-            print(controller.database_setup())
-            print(controller.database_test())
-        elif username.lower() != "exit":
+        if username.lower() != "exit":
             password = input("Enter your Password: ").strip()
             access = controller.log_in(username, password)
             if not access:
