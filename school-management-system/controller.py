@@ -221,13 +221,16 @@ def get_parent_id_by_phone(parent_phone):
     return db_reader.get_parentID_by_phone(parent_phone)
 
 def register_student(name, last_name, password, house_id, parent_id):
-    username = generate_username(name, last_name)
-    email = generate_email(name, last_name, "student")
-    student_id = db_writer.register_user(username, password, email, "student")
-    if student_id:
-        db_writer.register_student(student_id, name, last_name, house_id, parent_id)
-        return f"\n----- Student Registered Successfully (ID: {student_id}) -----\n"
-    return "\nCould Not Register Student Due to a User Creation Error."
+    if is_valid_name(name) and is_valid_name(last_name) and is_valid_password(password):
+        username = generate_username(name, last_name)
+        email = generate_email(name, last_name, "student")
+        student_id = db_writer.register_user(username, password, email, "student")
+        if student_id:
+            db_writer.register_student(student_id, name, last_name, house_id, parent_id)
+            return f"\n----- Student Registered Successfully (ID: {student_id}) -----\n"
+        return "\nCould Not Register Student Due to a User Creation Error."
+    else:
+        return "\nInvalid inputs. Please check the length of names and password."
 
 def add_class(student_id, class_id):
     student_id = student_id.strip()
