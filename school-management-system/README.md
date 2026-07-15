@@ -24,6 +24,6 @@ A robust and intuitive Python-based command-line application designed to manage 
 ## How to Run the Application
 1. Clone this repository to your local machine.
 2. Ensure you have Python installed.
-3. Run the main file from your terminal:
-   ```bash
-   python main.py
+3. Run the main file from your terminal: `python main.py`
+4. You can use the restart option within the application to clear the database, allowing you to wipe the existing records and insert your own custom data.
+5. Feel free to explore through the menus and options.
