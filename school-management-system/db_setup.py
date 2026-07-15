@@ -177,7 +177,6 @@ def seed_database():
             (12, 'Karen', 'White', 'Biology'),
             (13, 'Thomas', 'Miller', 'Maintenance'),
             (14, 'George', 'Harris', 'Maintenance'),
-            (22, 'Julian', 'V', 'Administration')
         ])
         
         # ==== TABLE offices ====
