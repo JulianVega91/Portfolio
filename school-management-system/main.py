@@ -152,7 +152,7 @@ def register_menu():
                 if not house_id:
                     print("Error With House Name, Try Again!")
             
-            parent_phone = input("Enter Parent Phone Number: ").strip()
+            parent_phone = input("Enter Parent Phone Number (XXX-XXX-XXXX): ").strip()
             parent_id = controller.get_parent_id_by_phone(parent_phone)
             
             if not parent_id:
@@ -160,7 +160,7 @@ def register_menu():
                 print("\n========== ENTER PARENT INFO ==========")
                 p_name = input("Enter Parent Name: ").strip()
                 p_last_name = input("Enter Parent Last Name: ").strip()
-                p_phone_number = input("Enter Parent Phone Number: ").strip()
+                p_phone_number = input("Enter Parent Phone Number (XXX-XXX-XXXX): ").strip()
                 p_email = input("Enter Parent Email: ").strip()
                 p_address = input("Enter Parent Address: ").strip()
                 
