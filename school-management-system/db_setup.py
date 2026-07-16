@@ -129,7 +129,6 @@ def seed_database():
     
     try:
         # ==== TABLE users - admins & teachers ====
-        # Corregido a: nombre + apellido
         cursor.executemany('INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, ?)', [
             ('jamescarter', 'pass1', 'james.carter@staff.college.edu', 'admin'),
             ('lindafoster', 'pass2', 'linda.foster@staff.college.edu', 'admin'),
@@ -148,7 +147,6 @@ def seed_database():
         ])
 
         # ==== TABLE users - students ====
-        # Corregido a: nombre + apellido
         cursor.executemany('INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, ?)', [
             ('chrisbrown', 'student789', 'chris.brown@student.college.edu', 'student'), 
             ('emmabrown', 'pass16', 'emma.brown@student.college.edu', 'student'),
@@ -157,12 +155,6 @@ def seed_database():
             ('oliviawilson', 'pass19', 'olivia.wilson@student.college.edu', 'student'),
             ('danieladams', 'pass20', 'daniel.adams@student.college.edu', 'student'),
             ('sophiaadams', 'pass21', 'sophia.adams@student.college.edu', 'student')
-        ])
-        
-        # ==== TABLE users - ADMIN PRINCIPAL ====
-        # Corregido a: nombre + inicial apellido (julianv)
-        cursor.executemany('INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, ?)', [
-            ('julianv', '422005', 'julian.v@staff.college.edu', 'admin')
         ])
 
         # ==== TABLE staff ====
